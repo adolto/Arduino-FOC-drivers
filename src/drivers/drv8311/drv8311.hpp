@@ -446,34 +446,34 @@ public:
     /* Read status from device */
 
     /**
-     * @brief Reads and returns the device status
+     * @brief Read and returns the device status
      */
     DRV8311_DeviceStatus getDeviceStatus();
 
     /**
-     * @brief Reads and returns the over temperature status
+     * @brief Read and returns the over temperature status
      */
     DRV8311_OverTemperatureStatus getOverTemperatureStatus();
 
     /**
-     * @brief Reads and returns the supply status
+     * @brief Read and returns the supply status
      */
     DRV8311_SupplyStatus getSupplyStatus();
 
     /**
-     * @brief Reads and returns the driver status
+     * @brief Read and returns the driver status
      */
     DRV8311_DriverStatus getDriverStatus();
 
     /**
-     * @brief Reads and returns the system status
+     * @brief Read and returns the system status
      */
     DRV8311_SystemStatus getSystemStatus();
 
     /* Read and write configurations from and to device */
 
     /**
-     * @brief Sets the over temperature fault mode
+     * @brief Set the over temperature fault mode
      */
     void setOverTemperatureFaultMode(DRV8311_OverTemperatureFaultMode mode);
 
@@ -483,7 +483,7 @@ public:
     DRV8311_OverTemperatureFaultMode getOverTemperatureFaultMode();
 
     /**
-     * @brief Sets the under voltage protection fault mode
+     * @brief Set the under voltage protection fault mode
      */
     void setUnderVoltageProtectionFaultMode(DRV8311_UnderVoltageProtectionFaultMode mode);
 
@@ -493,7 +493,7 @@ public:
     DRV8311_UnderVoltageProtectionFaultMode getUnderVoltageProtectionFaultMode();
 
     /**
-     * @brief Sets the over current protection fault mode
+     * @brief Set the over current protection fault mode
      */
     void setOverCurrentProtectionFaultMode(DRV8311_OverCurrentProtectionFaultMode mode);
 
@@ -503,7 +503,7 @@ public:
     DRV8311_OverCurrentProtectionFaultMode getOverCurrentProtectionFaultMode();
 
     /**
-     * @brief Sets the SPI fault mode
+     * @brief Set the SPI fault mode
      */
     void setSPIFaultMode(DRV8311_SPIFaultMode mode);
 
@@ -513,7 +513,7 @@ public:
     DRV8311_SPIFaultMode getSPIFaultMode();
 
     /**
-     * @brief Sets the system fault mode
+     * @brief Set the system fault mode
      */
     void setSystemFaultMode(DRV8311_SystemFaultMode mode);
 
@@ -523,7 +523,7 @@ public:
     DRV8311_SystemFaultMode getSystemFaultMode();
 
     /**
-     * @brief Sets the CSAREF undervoltage fault enable
+     * @brief Set the CSAREF undervoltage fault enable
      */
     void setCSAREFUnderVoltageFaultEnable(DRV8311_CSAREFUnderVoltageFaultEnable enable);
 
@@ -533,7 +533,7 @@ public:
     DRV8311_CSAREFUnderVoltageFaultEnable getCSAREFUnderVoltageFaultEnable();
 
     /**
-     * @brief Sets the over temperature warning fault enable
+     * @brief Set the over temperature warning fault enable
      */
     void setOverTemperatureWaringFaultEnable(DRV8311_OverTemperatureWaringFaultEnable enable);
 
@@ -543,7 +543,7 @@ public:
     DRV8311_OverTemperatureWaringFaultEnable getOverTemperatureWaringFaultEnable();
 
     /**
-     * @brief Sets the AVDD over temperature fault enable
+     * @brief Set the AVDD over temperature fault enable
      */
     void setAVDDOverTemperatureFaultEnable(DRV8311_AVDDOverTemperatureFaultEnable enable);
 
@@ -553,7 +553,7 @@ public:
     DRV8311_AVDDOverTemperatureFaultEnable getAVDDOverTemperatureFaultEnable();
 
     /**
-     * @brief Sets the OCP level
+     * @brief Set the OCP level
      */
     void setOCPLevel(DRV8311_OCPLevel level);
 
@@ -563,7 +563,7 @@ public:
     DRV8311_OCPLevel getOCPLevel();
 
     /**
-     * @brief Sets the OCP blanking time
+     * @brief Set the OCP blanking time
      */
     void setOCPBlankingTime(DRV8311_OCPBlankingTime time);
 
@@ -573,7 +573,7 @@ public:
     DRV8311_OCPBlankingTime getOCPBlankingTime();
 
     /**
-     * @brief Sets the OCP deglitch time
+     * @brief Set the OCP deglitch time
      */
     void setOCPDeglitchTime(DRV8311_OCPDeglitchTime time);
 
@@ -583,7 +583,7 @@ public:
     DRV8311_OCPDeglitchTime getOCPDeglitchTime();
 
     /**
-     * @brief Sets the fast recovery retry time
+     * @brief Set the fast recovery retry time
      */
     void setFastRecoveryRetryTime(DRV8311_FastRecoveryRetryTime time);
 
@@ -593,7 +593,7 @@ public:
     DRV8311_FastRecoveryRetryTime getFastRecoveryRetryTime();
 
     /**
-     * @brief Sets the slow recovery retry time
+     * @brief Set the slow recovery retry time
      */
     void setSlowRecoveryRetryTime(DRV8311_SlowRecoveryRetryTime time);
 
@@ -603,7 +603,7 @@ public:
     DRV8311_SlowRecoveryRetryTime getSlowRecoveryRetryTime();
 
     /**
-     * @brief Sets the Phase A Driver Output control
+     * @brief Set the Phase A Driver Output control
      */
     void setPhaseADriverOutputControl(DRV8311_PhaseDriverOutputControl control);
 
@@ -613,7 +613,7 @@ public:
     DRV8311_PhaseDriverOutputControl getPhaseADriverOutputControl();
 
     /**
-     * @brief Sets the Phase B Driver Output control
+     * @brief Set the Phase B Driver Output control
      */
     void setPhaseBDriverOutputControl(DRV8311_PhaseDriverOutputControl control);
 
@@ -623,7 +623,7 @@ public:
     DRV8311_PhaseDriverOutputControl getPhaseBDriverOutputControl();
 
     /**
-     * @brief Sets the Phase C Driver Output control
+     * @brief Set the Phase C Driver Output control
      */
     void setPhaseCDriverOutputControl(DRV8311_PhaseDriverOutputControl control);
 
@@ -633,7 +633,7 @@ public:
     DRV8311_PhaseDriverOutputControl getPhaseCDriverOutputControl();
 
     /**
-     * @brief Sets the number of SPI Clock Cycle require for synchronizing the Oscillator
+     * @brief Set the number of SPI Clock Cycle require for synchronizing the Oscillator
      */
     void setSPISyncClockCycles(DRV8311_SPISyncClockCycles cycles);
 
@@ -643,7 +643,7 @@ public:
     DRV8311_SPISyncClockCycles getSPISyncClockCycles();
 
     /**
-     * @brief Sets the SPI Clock Frequency for synchronizing the Oscillator
+     * @brief Set the SPI Clock Frequency for synchronizing the Oscillator
      */
     void setSPISyncFrequency(DRV8311_SPISyncFrequency frequency);
 
@@ -653,7 +653,7 @@ public:
     DRV8311_SPISyncFrequency getSPISyncFrequency();
 
     /**
-     * @brief Sets the Oscillator synchronization and PWM_SYNC control
+     * @brief Set the Oscillator synchronization and PWM_SYNC control
      */
     void setOscillatorSyncControl(DRV8311_OscillatorSyncControl control);
 
@@ -663,7 +663,7 @@ public:
     DRV8311_OscillatorSyncControl getOscillatorSyncControl();
 
     /**
-     * @brief Sets the PWM Gen counter mode
+     * @brief Set the PWM Gen counter mode
      */
     void setPWMGenCounterMode(DRV8311_PWMGenCounterMode mode);
 
@@ -673,7 +673,7 @@ public:
     DRV8311_PWMGenCounterMode getPWMGenCounterMode();
 
     /**
-     * @brief Sets the Enable 3X Internal mode PWM Generation
+     * @brief Set the Enable 3X Internal mode PWM Generation
      */
     void setPWMGenEnable(DRV8311_PWM_GEN_ENABLE enable);
 
@@ -683,7 +683,7 @@ public:
     DRV8311_PWM_GEN_ENABLE getPWMGenEnable();
 
     /**
-     * @brief Sets the PWM mode selection
+     * @brief Set the PWM mode selection
      */
     void setPWMMode(DRV8311_PWMMode mode);
 
@@ -693,7 +693,7 @@ public:
     DRV8311_PWMMode getPWMMode();
 
     /**
-     * @brief Sets the Spread Spectrum Modulation for internal Oscillator
+     * @brief Set the Spread Spectrum Modulation for internal Oscillator
      */
     void setSpreadSpectrumModulation(DRV8311_SpreadSpectrumModulation modulation);
 
@@ -703,7 +703,7 @@ public:
     DRV8311_SpreadSpectrumModulation getSpreadSpectrumModulation();
 
     /**
-     * @brief Sets the Slew rate settings
+     * @brief Set the Slew rate settings
      */
     void setSlewRate(DRV8311_SlewRate rate);
 
@@ -713,7 +713,7 @@ public:
     DRV8311_SlewRate getSlewRate();
 
     /**
-     * @brief Sets the Deadtime insertion control
+     * @brief Set the Deadtime insertion control
      */
     void setDeadtimeInsertion(DRV8311_DeadtimeInsertion insertion);
 
@@ -723,7 +723,7 @@ public:
     DRV8311_DeadtimeInsertion getDeadtimeInsertion();
 
     /**
-     * @brief Sets the Driver Delay Compensation
+     * @brief Set the Driver Delay Compensation
      */
     void setDriverDelayCompensation(DRV8311_DriverDelayCompensation compensation);
 
@@ -733,7 +733,7 @@ public:
     DRV8311_DriverDelayCompensation getDriverDelayCompensation();
 
     /**
-     * @brief Sets the Current Sense Amplifier Gain settings
+     * @brief Set the Current Sense Amplifier Gain settings
      */
     void setCurrentSenseAmplifierGain(DRV8311_CurrentSenseAmplifierGain gain);
 
@@ -743,7 +743,7 @@ public:
     DRV8311_CurrentSenseAmplifierGain getCSAGain();
 
     /**
-     * @brief Sets the Current Sense Amplifier Enable
+     * @brief Set the Current Sense Amplifier Enable
      */
     void setCurrentSenseAmplifierEnable(DRV8311_CurrentSenseAmplifierState enable);
 
@@ -753,7 +753,7 @@ public:
     DRV8311_CurrentSenseAmplifierState getCSAEnable();
 
     /**
-     * @brief Sets the Parity Enable for both SPI and tSPI
+     * @brief Set the Parity Enable for both SPI and tSPI
      */
     /* Parity handling is not supported for now
        Disabled method so it can't be enabled by mistake
@@ -764,7 +764,7 @@ public:
     DRV8311_ParityEnable getParityEnable();
 
     /**
-     * @brief Sets the Register Lock
+     * @brief Set the Register Lock
      */
     void setRegisterLock(DRV8311_RegisterLock lock);
 
