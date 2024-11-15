@@ -478,158 +478,14 @@ public:
     void setOverTemperatureFaultMode(DRV8311_OverTemperatureFaultMode mode);
 
     /**
-     * @brief Sets the under voltage protection fault mode
-     */
-    void setUnderVoltageProtectionFaultMode(DRV8311_UnderVoltageProtectionFaultMode mode);
-
-    /**
-     * @brief Sets the over current protection fault mode
-     */
-    void setOverCurrentProtectionFaultMode(DRV8311_OverCurrentProtectionFaultMode mode);
-
-    /**
-     * @brief Sets the SPI fault mode
-     */
-    void setSPIFaultMode(DRV8311_SPIFaultMode mode);
-
-    /**
-     * @brief Sets the system fault mode
-     */
-    void setSystemFaultMode(DRV8311_SystemFaultMode mode);
-
-    /**
-     * @brief Sets the CSAREF undervoltage fault enable
-     */
-    void setCSAREFUnderVoltageFaultEnable(DRV8311_CSAREFUnderVoltageFaultEnable enable);
-
-    /**
-     * @brief Sets the over temperature warning fault enable
-     */
-    void setOverTemperatureWaringFaultEnable(DRV8311_OverTemperatureWaringFaultEnable enable);
-
-    /**
-     * @brief Sets the AVDD over temperature fault enable
-     */
-    void setAVDDOverTemperatureFaultEnable(DRV8311_AVDDOverTemperatureFaultEnable enable);
-
-    /**
-     * @brief Sets the OCP level
-     */
-    void setOCPLevel(DRV8311_OCPLevel level);
-
-    /**
-     * @brief Sets the OCP blanking time
-     */
-    void setOCPBlankingTime(DRV8311_OCPBlankingTime time);
-
-    /**
-     * @brief Sets the OCP deglitch time
-     */
-    void setOCPDeglitchTime(DRV8311_OCPDeglitchTime time);
-
-    /**
-     * @brief Sets the fast recovery retry time
-     */
-    void setFastRecoveryRetryTime(DRV8311_FastRecoveryRetryTime time);
-
-    /**
-     * @brief Sets the slow recovery retry time
-     */
-    void setSlowRecoveryRetryTime(DRV8311_SlowRecoveryRetryTime time);
-
-    /**
-     * @brief Sets the Phase A Driver Output control
-     */
-    void setPhaseADriverOutputControl(DRV8311_PhaseDriverOutputControl control);
-
-    /**
-     * @brief Sets the Phase B Driver Output control
-     */
-    void setPhaseBDriverOutputControl(DRV8311_PhaseDriverOutputControl control);
-
-    /**
-     * @brief Sets the Phase C Driver Output control
-     */
-    void setPhaseCDriverOutputControl(DRV8311_PhaseDriverOutputControl control);
-
-    /**
-     * @brief Sets the number of SPI Clock Cycle require for synchronizing the Oscillator
-     */
-    void setSPISyncClockCycles(DRV8311_SPISyncClockCycles cycles);
-
-    /**
-     * @brief Sets the SPI Clock Frequency for synchronizing the Oscillator
-     */
-    void setSPISyncFrequency(DRV8311_SPISyncFrequency frequency);
-
-    /**
-     * @brief Sets the Oscillator synchronization and PWM_SYNC control
-     */
-    void setOscillatorSyncControl(DRV8311_OscillatorSyncControl control);
-
-    /**
-     * @brief Sets the PWM Gen counter mode
-     */
-    void setPWMGenCounterMode(DRV8311_PWMGenCounterMode mode);
-
-    /**
-     * @brief Sets the Enable 3X Internal mode PWM Generation
-     */
-    void setPWMGenEnable(DRV8311_PWM_GEN_ENABLE enable);
-
-    /**
-     * @brief Sets the PWM mode selection
-     */
-    void setPWMMode(DRV8311_PWMMode mode);
-
-    /**
-     * @brief Sets the Spread Spectrum Modulation for internal Oscillator
-     */
-    void setSpreadSpectrumModulation(DRV8311_SpreadSpectrumModulation modulation);
-
-    /**
-     * @brief Sets the Slew rate settings
-     */
-    void setSlewRate(DRV8311_SlewRate rate);
-
-    /**
-     * @brief Sets the Deadtime insertion control
-     */
-    void setDeadtimeInsertion(DRV8311_DeadtimeInsertion insertion);
-
-    /**
-     * @brief Sets the Driver Delay Compensation
-     */
-    void setDriverDelayCompensation(DRV8311_DriverDelayCompensation compensation);
-
-    /**
-     * @brief Sets the Current Sense Amplifier Gain settings
-     */
-    void setCurrentSenseAmplifierGain(DRV8311_CurrentSenseAmplifierGain gain);
-
-    /**
-     * @brief Sets the Current Sense Amplifier Enable
-     */
-    void setCurrentSenseAmplifierEnable(DRV8311_CurrentSenseAmplifierState enable);
-
-    /**
-     * @brief Sets the Parity Enable for both SPI and tSPI
-     */
-    /* Parity handling is not supported for now
-       Disabled method so it can't be enabled by mistake
-    void setParityEnable(DRV8311_ParityEnable enable); */
-
-    /**
-     * @brief Sets the Register Lock
-     */
-    void setRegisterLock(DRV8311_RegisterLock lock);
-
-    /* Read configurations from device */
-
-    /**
      * @brief Get the over temperature fault mode
      */
     DRV8311_OverTemperatureFaultMode getOverTemperatureFaultMode();
+
+    /**
+     * @brief Sets the under voltage protection fault mode
+     */
+    void setUnderVoltageProtectionFaultMode(DRV8311_UnderVoltageProtectionFaultMode mode);
 
     /**
      * @brief Get the under voltage protection fault mode
@@ -637,9 +493,19 @@ public:
     DRV8311_UnderVoltageProtectionFaultMode getUnderVoltageProtectionFaultMode();
 
     /**
+     * @brief Sets the over current protection fault mode
+     */
+    void setOverCurrentProtectionFaultMode(DRV8311_OverCurrentProtectionFaultMode mode);
+
+    /**
      * @brief Get the over current protection fault mode
      */
     DRV8311_OverCurrentProtectionFaultMode getOverCurrentProtectionFaultMode();
+
+    /**
+     * @brief Sets the SPI fault mode
+     */
+    void setSPIFaultMode(DRV8311_SPIFaultMode mode);
 
     /**
      * @brief Get the SPI fault mode
@@ -647,9 +513,19 @@ public:
     DRV8311_SPIFaultMode getSPIFaultMode();
 
     /**
+     * @brief Sets the system fault mode
+     */
+    void setSystemFaultMode(DRV8311_SystemFaultMode mode);
+
+    /**
      * @brief Get the system fault mode
      */
     DRV8311_SystemFaultMode getSystemFaultMode();
+
+    /**
+     * @brief Sets the CSAREF undervoltage fault enable
+     */
+    void setCSAREFUnderVoltageFaultEnable(DRV8311_CSAREFUnderVoltageFaultEnable enable);
 
     /**
      * @brief Get the CSAREF undervoltage fault enable
@@ -657,9 +533,19 @@ public:
     DRV8311_CSAREFUnderVoltageFaultEnable getCSAREFUnderVoltageFaultEnable();
 
     /**
+     * @brief Sets the over temperature warning fault enable
+     */
+    void setOverTemperatureWaringFaultEnable(DRV8311_OverTemperatureWaringFaultEnable enable);
+
+    /**
      * @brief Get the over temperature warning fault enable
      */
     DRV8311_OverTemperatureWaringFaultEnable getOverTemperatureWaringFaultEnable();
+
+    /**
+     * @brief Sets the AVDD over temperature fault enable
+     */
+    void setAVDDOverTemperatureFaultEnable(DRV8311_AVDDOverTemperatureFaultEnable enable);
 
     /**
      * @brief Get the AVDD over temperature fault enable
@@ -667,9 +553,19 @@ public:
     DRV8311_AVDDOverTemperatureFaultEnable getAVDDOverTemperatureFaultEnable();
 
     /**
+     * @brief Sets the OCP level
+     */
+    void setOCPLevel(DRV8311_OCPLevel level);
+
+    /**
      * @brief Get the OCP level
      */
     DRV8311_OCPLevel getOCPLevel();
+
+    /**
+     * @brief Sets the OCP blanking time
+     */
+    void setOCPBlankingTime(DRV8311_OCPBlankingTime time);
 
     /**
      * @brief Get the OCP blanking time
@@ -677,9 +573,19 @@ public:
     DRV8311_OCPBlankingTime getOCPBlankingTime();
 
     /**
+     * @brief Sets the OCP deglitch time
+     */
+    void setOCPDeglitchTime(DRV8311_OCPDeglitchTime time);
+
+    /**
      * @brief Get the OCP deglitch time
      */
     DRV8311_OCPDeglitchTime getOCPDeglitchTime();
+
+    /**
+     * @brief Sets the fast recovery retry time
+     */
+    void setFastRecoveryRetryTime(DRV8311_FastRecoveryRetryTime time);
 
     /**
      * @brief Get the fast recovery retry time
@@ -687,9 +593,19 @@ public:
     DRV8311_FastRecoveryRetryTime getFastRecoveryRetryTime();
 
     /**
+     * @brief Sets the slow recovery retry time
+     */
+    void setSlowRecoveryRetryTime(DRV8311_SlowRecoveryRetryTime time);
+
+    /**
      * @brief Get the slow recovery retry time
      */
     DRV8311_SlowRecoveryRetryTime getSlowRecoveryRetryTime();
+
+    /**
+     * @brief Sets the Phase A Driver Output control
+     */
+    void setPhaseADriverOutputControl(DRV8311_PhaseDriverOutputControl control);
 
     /**
      * @brief Get the Phase A Driver Output control
@@ -697,9 +613,19 @@ public:
     DRV8311_PhaseDriverOutputControl getPhaseADriverOutputControl();
 
     /**
+     * @brief Sets the Phase B Driver Output control
+     */
+    void setPhaseBDriverOutputControl(DRV8311_PhaseDriverOutputControl control);
+
+    /**
      * @brief Get the Phase B Driver Output control
      */
     DRV8311_PhaseDriverOutputControl getPhaseBDriverOutputControl();
+
+    /**
+     * @brief Sets the Phase C Driver Output control
+     */
+    void setPhaseCDriverOutputControl(DRV8311_PhaseDriverOutputControl control);
 
     /**
      * @brief Get the Phase C Driver Output control
@@ -707,9 +633,19 @@ public:
     DRV8311_PhaseDriverOutputControl getPhaseCDriverOutputControl();
 
     /**
+     * @brief Sets the number of SPI Clock Cycle require for synchronizing the Oscillator
+     */
+    void setSPISyncClockCycles(DRV8311_SPISyncClockCycles cycles);
+
+    /**
      * @brief Number of SPI Clock Cycle require for synchronizing the Oscillator
      */
     DRV8311_SPISyncClockCycles getSPISyncClockCycles();
+
+    /**
+     * @brief Sets the SPI Clock Frequency for synchronizing the Oscillator
+     */
+    void setSPISyncFrequency(DRV8311_SPISyncFrequency frequency);
 
     /**
      * @brief get SPI Clock Frequency for synchronizing the Oscillator
@@ -717,9 +653,19 @@ public:
     DRV8311_SPISyncFrequency getSPISyncFrequency();
 
     /**
+     * @brief Sets the Oscillator synchronization and PWM_SYNC control
+     */
+    void setOscillatorSyncControl(DRV8311_OscillatorSyncControl control);
+
+    /**
      * @brief get Oscillator synchronization and PWM_SYNC control
      */
     DRV8311_OscillatorSyncControl getOscillatorSyncControl();
+
+    /**
+     * @brief Sets the PWM Gen counter mode
+     */
+    void setPWMGenCounterMode(DRV8311_PWMGenCounterMode mode);
 
     /**
      * @brief get PWM Gen counter mode
@@ -727,9 +673,19 @@ public:
     DRV8311_PWMGenCounterMode getPWMGenCounterMode();
 
     /**
+     * @brief Sets the Enable 3X Internal mode PWM Generation
+     */
+    void setPWMGenEnable(DRV8311_PWM_GEN_ENABLE enable);
+
+    /**
      * @brief get Enable 3X Internal mode PWM Generation
      */
     DRV8311_PWM_GEN_ENABLE getPWMGenEnable();
+
+    /**
+     * @brief Sets the PWM mode selection
+     */
+    void setPWMMode(DRV8311_PWMMode mode);
 
     /**
      * @brief get PWM mode selection
@@ -737,9 +693,19 @@ public:
     DRV8311_PWMMode getPWMMode();
 
     /**
+     * @brief Sets the Spread Spectrum Modulation for internal Oscillator
+     */
+    void setSpreadSpectrumModulation(DRV8311_SpreadSpectrumModulation modulation);
+
+    /**
      * @brief get Spread Spectrum Modulation for internal Oscillator
      */
     DRV8311_SpreadSpectrumModulation getSpreadSpectrumModulation();
+
+    /**
+     * @brief Sets the Slew rate settings
+     */
+    void setSlewRate(DRV8311_SlewRate rate);
 
     /**
      * @brief get Slew rate settings
@@ -747,9 +713,19 @@ public:
     DRV8311_SlewRate getSlewRate();
 
     /**
+     * @brief Sets the Deadtime insertion control
+     */
+    void setDeadtimeInsertion(DRV8311_DeadtimeInsertion insertion);
+
+    /**
      * @brief get Deadtime insertion control
      */
     DRV8311_DeadtimeInsertion getDeadtimeInsertion();
+
+    /**
+     * @brief Sets the Driver Delay Compensation
+     */
+    void setDriverDelayCompensation(DRV8311_DriverDelayCompensation compensation);
 
     /**
      * @brief get Driver Delay Compensation
@@ -757,9 +733,19 @@ public:
     DRV8311_DriverDelayCompensation getDriverDelayCompensation();
 
     /**
+     * @brief Sets the Current Sense Amplifier Gain settings
+     */
+    void setCurrentSenseAmplifierGain(DRV8311_CurrentSenseAmplifierGain gain);
+
+    /**
      * @brief get Current Sense Amplifier Gain settings
      */
     DRV8311_CurrentSenseAmplifierGain getCSAGain();
+
+    /**
+     * @brief Sets the Current Sense Amplifier Enable
+     */
+    void setCurrentSenseAmplifierEnable(DRV8311_CurrentSenseAmplifierState enable);
 
     /**
      * @brief get Current Sense Amplifier Enable
@@ -767,62 +753,29 @@ public:
     DRV8311_CurrentSenseAmplifierState getCSAEnable();
 
     /**
+     * @brief Sets the Parity Enable for both SPI and tSPI
+     */
+    /* Parity handling is not supported for now
+       Disabled method so it can't be enabled by mistake
+    void setParityEnable(DRV8311_ParityEnable enable); */
+    /**
      * @brief get Parity Enable for both SPI and tSPI
      */
     DRV8311_ParityEnable getParityEnable();
+
+    /**
+     * @brief Sets the Register Lock
+     */
+    void setRegisterLock(DRV8311_RegisterLock lock);
 
     /**
      * @brief get Register Lock
      */
     DRV8311_RegisterLock getRegisterLock();
 
-    /* Read PWM generation */
+    /* Varius other functionalities */
 
-    ///**
-    // * @brief Get 12-bit Period for output PWM signals in PWM Generation Mode
-    // */
-    //uint16_t getPWMGenerationPeriod();
-//
-    ///**
-    // * @brief Get 12-bit Duty Cycle for Phase A output in PWM Generation Mode
-    // */
-    //uint16_t getPWMGenerationDutyCyclePhaseA();
-//
-    ///**
-    // * @brief Get 12-bit Duty Cycle for Phase B output in PWM Generation Mode
-    // */
-    //uint16_t getPWMGenerationDutyCyclePhaseB();
-//
-    ///**
-    // * @brief Get 12-bit Duty Cycle for Phase C output in PWM Generation Mode
-    // */
-    //uint16_t getPWMGenerationDutyCyclePhaseC();
-//
-    ///* Write PWM generation */
-//
-    ///**
-    // * @brief Set 12-bit Period for output PWM signals in PWM Generation Mode
-    // */
-    //void setPWMGenerationPeriod(uint16_t period);
-//
-    ///**
-    // * @brief Set 12-bit Duty Cycle for Phase A output in PWM Generation Mode
-    // */
-    //void setPWMGenerationDutyCyclePhaseA(uint16_t dutyCycle);
-//
-    ///**
-    // * @brief Set 12-bit Duty Cycle for Phase B output in PWM Generation Mode
-    // */
-    //void setPWMGenerationDutyCyclePhaseB(uint16_t dutyCycle);
-//
-    ///**
-    // * @brief Set 12-bit Duty Cycle for Phase C output in PWM Generation Mode
-    // */
-    //void setPWMGenerationDutyCyclePhaseC(uint16_t dutyCycle);
-//
-    ///* Varius other functionalities  */
-
-    /**
+    /** 
      * @brief Clear all faults
      */
     void clearFaults();
