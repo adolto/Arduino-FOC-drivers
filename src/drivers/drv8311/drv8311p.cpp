@@ -62,6 +62,7 @@ void DRV8311PDriver::setPwm(float Ua, float Ub, float Uc)
     dc_b = _constrain(Ub2 / voltage_power_supply, 0.0f , 1.0f);
     dc_c = _constrain(Uc2 / voltage_power_supply, 0.0f , 1.0f);
 
+    // TODO: Add way to change PWM frequency
     float MAX_REGISTER_VALUE = 512 - 1;
     //float MAX_REGISTER_VALUE = 4096 - 1;
     uint16_t dutyCycleBuffer[4] = {0};
