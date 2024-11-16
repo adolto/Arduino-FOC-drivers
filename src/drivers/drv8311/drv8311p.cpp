@@ -85,7 +85,7 @@ void DRV8311PDriver::setPwm(float Ua, float Ub, float Uc)
 }
 
 void DRV8311PDriver::setPhaseState(PhaseState sa, PhaseState sb, PhaseState sc)
-{
+{ 
     // char buffer[50];
     // sprintf(buffer, "setPhaseState %d %d %d\n", sa, sb, sc);
     // Serial.print(buffer);
@@ -110,13 +110,18 @@ void DRV8311PDriver::setPhaseState(PhaseState sa, PhaseState sb, PhaseState sc)
             {
                 return DRV8311_PhaseDriverOutputControl::HIGH_SIDE_OFF_LOW_SIDE_PWM;
             }
+            default:
+            {
+                /* Shouldn't reach here, but turn of output drivers just in case */
+                return DRV8311_PhaseDriverOutputControl::HIGH_SIDE_OFF_LOW_SIDE_OFF;
+            }
         };
     };
 
-    DRV8311_PWM_STATE_Register phaseState{
-        .PWMA_STATE = (uint16_t)ConvertState(sa),
-        .PWMB_STATE = (uint16_t)ConvertState(sb),
-        .PWMC_STATE = (uint16_t)ConvertState(sc)};
+    DRV8311_PWM_STATE_Register phaseState = {};
+    phaseState.PWMA_STATE = (uint16_t)ConvertState(sa);
+    phaseState.PWMB_STATE = (uint16_t)ConvertState(sb);
+    phaseState.PWMC_STATE = (uint16_t)ConvertState(sc);
 
     writeRegister(DRV8311_PWM_STATE_OFFSET, phaseState.reg);
 }
