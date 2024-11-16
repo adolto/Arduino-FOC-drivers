@@ -679,48 +679,6 @@ public:
     void clearFaults();
 
     /**
-     * @brief Get the Phase A Driver Output control
-     * 
-     * @return DRV8311_PhaseDriverOutputControl The Phase A Driver Output control
-     */
-    DRV8311_PhaseDriverOutputControl getPhaseADriverOutputControl();
-
-    /**
-     * @brief Set the Phase A Driver Output control
-     * 
-     * @param control The Phase A Driver Output control to set
-     */
-    void setPhaseADriverOutputControl(DRV8311_PhaseDriverOutputControl control);
-
-    /**
-     * @brief Get the Phase B Driver Output control
-     * 
-     * @return DRV8311_PhaseDriverOutputControl The Phase B Driver Output control
-     */
-    DRV8311_PhaseDriverOutputControl getPhaseBDriverOutputControl();
-
-    /**
-     * @brief Set the Phase B Driver Output control
-     * 
-     * @param control The Phase B Driver Output control to set
-     */
-    void setPhaseBDriverOutputControl(DRV8311_PhaseDriverOutputControl control);
-
-    /**
-     * @brief Get the Phase C Driver Output control
-     * 
-     * @return DRV8311_PhaseDriverOutputControl The Phase C Driver Output control
-     */
-    DRV8311_PhaseDriverOutputControl getPhaseCDriverOutputControl();
-
-    /**
-     * @brief Set the Phase C Driver Output control
-     * 
-     * @param control The Phase C Driver Output control to set
-     */
-    void setPhaseCDriverOutputControl(DRV8311_PhaseDriverOutputControl control);
-
-    /**
      * @brief Number of SPI Clock Cycle require for synchronizing the Oscillator
      * 
      * @return DRV8311_SPISyncClockCycles The number of SPI Clock Cycles
@@ -903,18 +861,18 @@ public:
     void setParityEnable(DRV8311_ParityEnable enable); */
 
     /**
-     * @brief Set the Register Lock
-     * 
-     * @param lock The Register Lock to set
-     */
-    void setRegisterLock(DRV8311_RegisterLock lock);
-
-    /**
      * @brief get Register Lock
      * 
      * @return DRV8311_RegisterLock The Register Lock
      */
     DRV8311_RegisterLock getRegisterLock();
+
+    /**
+     * @brief Set the Register Lock
+     * 
+     * @param lock The Register Lock to set
+     */
+    void setRegisterLock(DRV8311_RegisterLock lock);
 
 protected:
 
