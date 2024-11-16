@@ -112,7 +112,7 @@ void DRV8311PDriver::setPhaseState(PhaseState sa, PhaseState sb, PhaseState sc)
             }
             default:
             {
-                /* Shouldn't reach here, but turn of output drivers just in case */
+                /* Shouldn't reach here, but let's turn off output drivers just in case */
                 return DRV8311_PhaseDriverOutputControl::HIGH_SIDE_OFF_LOW_SIDE_OFF;
             }
         };
