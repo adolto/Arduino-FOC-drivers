@@ -72,7 +72,7 @@ typedef union
         uint16_t PARITY_BIT : 1; /* Bit 15: Parity Bit if SPI_PEN is set to '1' otherwise reserved */
     };
     uint16_t reg;
-} DRV8311_DEV_STS1;
+} DRV8311_DEV_STS1_Register;
 
 /**
  * @brief Over Temperature Status Register
@@ -94,7 +94,7 @@ typedef union
         uint16_t PARITY_BIT : 1; /* Bit 15: Parity Bit if SPI_PEN is set to '1' otherwise reserved */
     };
     uint16_t reg;
-} DRV8311_OT_STS;
+} DRV8311_OT_STS_Register;
 
 /**
  * @brief Supply Status Register
@@ -121,7 +121,7 @@ typedef union
         uint16_t PARITY_BIT : 1; /* Bit 15: Parity Bit if SPI_PEN is set to '1' otherwise reserved */
     };
     uint16_t reg;
-} DRV8311_SUP_STS;
+} DRV8311_SUP_STS_Register;
 
 /**
  * @brief Driver Status Register
@@ -153,7 +153,7 @@ typedef union
         uint16_t PARITY_BIT : 1; /* Bit 15: Parity Bit if SPI_PEN is set to '1' otherwise reserved */
     };
     uint16_t reg;
-} DRV8311_DRV_STS;
+} DRV8311_DRV_STS_Register;
 
 /**
  * @brief System Status Register
@@ -179,7 +179,7 @@ typedef union
         uint16_t PARITY_BIT : 1; /* Bit 15: Parity Bit if SPI_PEN is set to '1' otherwise reserved */
     };
     uint16_t reg;
-} DRV8311_SYS_STS;
+} DRV8311_SYS_STS_Register;
 
 /**
  * @brief PWM Sync Period Register
@@ -193,7 +193,7 @@ typedef union
         uint16_t PARITY_BIT : 1;    /* Bit 15: Parity Bit if SPI_PEN is set to '1' otherwise reserved */
     };
     uint16_t reg;
-} DRV8311_PWM_SYNC_PRD;
+} DRV8311_PWM_SYNC_PRD_Register;
 
 /**
  * @brief Fault Mode Register
@@ -231,7 +231,7 @@ typedef union
         uint16_t PARITY_BIT : 1;  /* Bit 15: Parity Bit if SPI_PEN is set to '1' otherwise reserved */
     };
     uint16_t reg;
-} DRV8311_FLT_MODE;
+} DRV8311_FLT_MODE_Register;
 
 /**
  * @brief System Fault Control Register
@@ -259,7 +259,7 @@ typedef union
         uint16_t PARITY_BIT : 1;  /* Bit 15: Parity Bit if SPI_PEN is set to '1' otherwise reserved */
     };
     uint16_t reg;
-} DRV8311_SYSF_CTRL;
+} DRV8311_SYSF_CTRL_Register;
 
 /**
  * @brief Driver Fault Control Register
@@ -286,7 +286,7 @@ typedef union
         uint16_t PARITY_BIT : 1; /* Bit 15: Parity Bit if SPI_PEN is set to '1' otherwise reserved */
     };
     uint16_t reg;
-} DRV8311_DRVF_CTRL;
+} DRV8311_DRVF_CTRL_Register;
 
 /**
  * @brief Fault Timing Control Register
@@ -309,7 +309,7 @@ typedef union
         uint16_t PARITY_BIT : 1;  /* Bit 15: Parity Bit if SPI_PEN is set to '1' otherwise reserved */
     };
     uint16_t reg;
-} DRV8311_FLT_TCTRL;
+} DRV8311_FLT_TCTRL_Register;
 
 /**
  * @brief Fault Clear Register
@@ -325,7 +325,7 @@ typedef union
         uint16_t PARITY_BIT : 1; /* Bit 15: Parity Bit if SPI_PEN is set to '1' otherwise reserved */
     };
     uint16_t reg;
-} DRV8311_FLT_CLR;
+} DRV8311_FLT_CLR_Register;
 
 /**
  * @brief PWM_GEN Period Register
@@ -339,7 +339,7 @@ typedef union
         uint16_t PARITY_BIT : 1;   /* Bit 15: Parity Bit if SPI_PEN is set to '1' otherwise reserved */
     };
     uint16_t reg;
-} DRV8311_PWMG_PERIOD;
+} DRV8311_PWMG_PERIOD_Register;
 
 /**
  * @brief PWM_GEN A Duty Register
@@ -353,7 +353,7 @@ typedef union
         uint16_t PARITY_BIT : 1;     /* Bit 15: Parity Bit if SPI_PEN is set to '1' otherwise reserved */
     };
     uint16_t reg;
-} DRV8311_PWMG_A_DUTY;
+} DRV8311_PWMG_A_DUTY_Register;
 
 /**
  * @brief PWM_GEN B Duty Register
@@ -367,7 +367,7 @@ typedef union
         uint16_t PARITY_BIT : 1;     /* Bit 15: Parity Bit if SPI_PEN is set to '1' otherwise reserved */
     };
     uint16_t reg;
-} DRV8311_PWMG_B_DUTY;
+} DRV8311_PWMG_B_DUTY_Register;
 
 /**
  * @brief PWM_GEN C Duty Register
@@ -381,7 +381,7 @@ typedef union
         uint16_t PARITY_BIT : 1;     /* Bit 15: Parity Bit if SPI_PEN is set to '1' otherwise reserved */
     };
     uint16_t reg;
-} DRV8311_PWMG_C_DUTY;
+} DRV8311_PWMG_C_DUTY_Register;
 
 /**
  * @brief PWM State Register
@@ -423,7 +423,7 @@ typedef union
         uint16_t PARITY_BIT : 1; /* Bit 15: Parity Bit if SPI_PEN is set to '1' otherwise reserved */
     };
     uint16_t reg;
-} DRV8311_PWM_STATE;
+} DRV8311_PWM_STATE_Register;
 
 /**
  * @brief PWM_GEN Control Register
@@ -471,7 +471,7 @@ typedef union
         uint16_t PARITY_BIT : 1;       /* Bit 13: Parity Bit if SPI_PEN is set to '1' otherwise reserved */
     };
     uint16_t reg;
-} DRV8311_PWMG_CTRL;
+} DRV8311_PWMG_CTRL_Register;
 
 /**
  * @brief PWM Control Register 1
@@ -493,7 +493,7 @@ typedef union
         uint16_t PARITY_BIT : 1; /* Bit 14: Parity Bit if SPI_PEN is set to '1' otherwise reserved */
     };
     uint16_t reg;
-} PWM_CTRL1_Register;
+} DRV8311_PWM_CTRL1_Register;
 
 /**
  * @brief Predriver control Register
@@ -525,7 +525,7 @@ typedef union
         uint16_t PARITY_BIT : 1; /* Bit 15: Parity Bit if SPI_PEN is set to '1' otherwise reserved */
     };
     uint16_t reg;
-} DRV_CTRL_Register;
+} DRV8311_DRV_CTRL_Register;
 
 /**
  * @brief CSA Control Register
@@ -547,7 +547,7 @@ typedef union
         uint16_t PARITY_BIT : 1; /* Bit 14: Parity Bit if SPI_PEN is set to '1' otherwise reserved */
     };
     uint16_t reg;
-} CSA_CTRL_Register;
+} DRV8311_CSA_CTRL_Register;
 
 /**
  * @brief System Control Register
@@ -571,7 +571,7 @@ typedef union
         uint16_t PARITY_BIT : 1; /* Bit 15: Parity Bit if SPI_PEN is set to '1' otherwise reserved */
     };
     uint16_t reg;
-} SYS_CTRL_Register;
+} DRV8311_SYS_CTRL_Register;
 
 /**
  * @brief Template Register just with Parity Bit
@@ -585,6 +585,6 @@ typedef union
     };
     uint16_t reg;
 
-} TEMPLATE_Register;
+} DRV8311_TEMPLATE_Register;
 
 #endif /* SIMPLEFOC_DRV8311_REGISTERS */

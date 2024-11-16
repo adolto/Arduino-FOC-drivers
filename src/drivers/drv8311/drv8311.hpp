@@ -334,7 +334,7 @@ enum class DRV8311_RegisterLock
 class DRV8311_DeviceStatus
 {
 public:
-    DRV8311_DeviceStatus(DRV8311_DEV_STS1 status) : _status(status){};
+    DRV8311_DeviceStatus(DRV8311_DEV_STS1_Register status) : _status(status){};
     DRV8311_DeviceStatus(uint16_t status) : _status(status){};
 
 
@@ -346,10 +346,10 @@ public:
     bool powerOnResetDetected() { return _status.RESET == 0x01; };
     bool otpReadErrorDetected() { return _status.OTP_FLT == 0x01; };
 
-    DRV8311_DEV_STS1 getRegister() { return _status; };
+    DRV8311_DEV_STS1_Register getRegister() { return _status; };
 
 private:
-    DRV8311_DEV_STS1 _status;
+    DRV8311_DEV_STS1_Register _status;
 };
 
 /**
@@ -358,17 +358,17 @@ private:
 class DRV8311_OverTemperatureStatus
 {
 public:
-    DRV8311_OverTemperatureStatus(DRV8311_OT_STS status) : _status(status){};
+    DRV8311_OverTemperatureStatus(DRV8311_OT_STS_Register status) : _status(status){};
     DRV8311_OverTemperatureStatus(uint16_t status) : _status(status){};
 
     bool overTemperatureShutdownDetected() { return _status.OTSD == 0x01; };
     bool overTemperatureWarningDetected() { return _status.OTW == 0x01; };
     bool overTemperaturAVDDShutdownDetected() { return _status.OTS_AVDD == 0x01; };
 
-    DRV8311_OT_STS getRegister() { return _status; };
+    DRV8311_OT_STS_Register getRegister() { return _status; };
 
 private:
-    DRV8311_OT_STS _status;
+    DRV8311_OT_STS_Register _status;
 };
 
 /**
@@ -377,7 +377,7 @@ private:
 class DRV8311_SupplyStatus
 {
 public:
-    DRV8311_SupplyStatus(DRV8311_SUP_STS status) : _status(status){};
+    DRV8311_SupplyStatus(DRV8311_SUP_STS_Register status) : _status(status){};
     DRV8311_SupplyStatus(uint16_t status) : _status(status){};
 
     bool underVoltageVinAvddDetected() { return _status.VINAVDD_UV == 0x01; };
@@ -385,10 +385,10 @@ public:
     bool underVoltageChargePumpDetected() { return _status.CP_UV == 0x01; };
     bool underVoltageCsaRefDetected() { return _status.CSAREF_UV == 0x01; };
 
-    DRV8311_SUP_STS getRegister() { return _status; };
+    DRV8311_SUP_STS_Register getRegister() { return _status; };
 
 private:
-    DRV8311_SUP_STS _status;
+    DRV8311_SUP_STS_Register _status;
 };
 
 /**
@@ -397,7 +397,7 @@ private:
 class DRV8311_DriverStatus
 {
 public:
-    DRV8311_DriverStatus(DRV8311_DRV_STS status) : _status(status){};
+    DRV8311_DriverStatus(DRV8311_DRV_STS_Register status) : _status(status){};
     DRV8311_DriverStatus(uint16_t status) : _status(status){};
 
     bool overCurrentALowSideDetected() { return _status.OCPA_LS == 0x01; };
@@ -407,10 +407,10 @@ public:
     bool overCurrentBHighSideDetected() { return _status.OCPB_HS == 0x01; };
     bool overCurrentCHighSideDetected() { return _status.OCPC_HS == 0x01; };
 
-    DRV8311_DRV_STS getRegister() { return _status; };
+    DRV8311_DRV_STS_Register getRegister() { return _status; };
 
 private:
-    DRV8311_DRV_STS _status;
+    DRV8311_DRV_STS_Register _status;
 };
 
 /**
@@ -419,7 +419,7 @@ private:
 class DRV8311_SystemStatus
 {
 public:
-    DRV8311_SystemStatus(DRV8311_SYS_STS status) : _status(status){};
+    DRV8311_SystemStatus(DRV8311_SYS_STS_Register status) : _status(status){};
     DRV8311_SystemStatus(uint16_t status) : _status(status){};
 
     bool spiFrameErrorDetected() { return _status.FRM_ERR == 0x01; };
@@ -427,10 +427,10 @@ public:
     bool spiParityErrorDetected() { return _status.SPI_PARITY == 0x01; };
     bool otpReadErrorDetected() { return _status.OTPLD_ERR == 0x01; };
 
-    DRV8311_SYS_STS getRegister() { return _status; };
+    DRV8311_SYS_STS_Register getRegister() { return _status; };
 
 private:
-    DRV8311_SYS_STS _status;
+    DRV8311_SYS_STS_Register _status;
 };
 
 class DRV8311Driver

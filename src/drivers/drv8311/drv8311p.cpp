@@ -113,7 +113,7 @@ void DRV8311PDriver::setPhaseState(PhaseState sa, PhaseState sb, PhaseState sc)
         };
     };
 
-    DRV8311_PWM_STATE phaseState{
+    DRV8311_PWM_STATE_Register phaseState{
         .PWMA_STATE = (uint16_t)ConvertState(sa),
         .PWMB_STATE = (uint16_t)ConvertState(sb),
         .PWMC_STATE = (uint16_t)ConvertState(sc)};
