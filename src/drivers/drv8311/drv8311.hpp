@@ -12,7 +12,7 @@
 // TODO: Improve
 static SPISettings DRV8311_DEFAULT_SPISettings(1000000, MSBFIRST, SPI_MODE1);
 
-/* Configuration enum classs for Fault Mode Register */
+/* Configuration enum classes for Fault Mode Register */
 
 /**
  * @brief Overtemperature Fault mode
@@ -62,7 +62,7 @@ enum class DRV8311_SystemFaultMode
     SYSTEM_FAULT_DISABLED = 0x01 /* OTP read fault is disabled */
 };
 
-/* Configuration enum classs for System Fault Control Register */
+/* Configuration enum classes for System Fault Control Register */
 
 /**
  * @brief CSAREF Undervoltage Fault Enable
@@ -91,7 +91,7 @@ enum class DRV8311_AVDDOverTemperatureFaultEnable
     AVDD_OVER_TEMPERATUR_FAULT_ENABLED = 0x01   /* Overtemperature protection near AVDD is enabled */
 };
 
-/* Configuration enum classs for Driver Fault Control Register */
+/* Configuration enum classes for Driver Fault Control Register */
 
 /**
  * @brief OCP Level Settings
@@ -124,7 +124,7 @@ enum class DRV8311_OCPDeglitchTime
     OCP_DEGLITCH_TIME_1us = 0x03    /* OCP deglitch time is 1 µs */
 };
 
-/* Configuration enum classs for Fault Timing Control Register */
+/* Configuration enum classes for Fault Timing Control Register */
 
 /**
  * @brief Fast Recovery Retry Time from Fault Condition
@@ -148,7 +148,7 @@ enum class DRV8311_SlowRecoveryRetryTime
     SLOW_RECOVERY_RETRY_TIME_5s = 0x03    /* Slow recovery retry time from Fault condition is 5 s */
 };
 
-/* Configuration enum classs for PWM State Register */
+/* Configuration enum classes for PWM State Register */
 
 /**
  * @brief Phase Driver Output control
@@ -163,7 +163,7 @@ enum class DRV8311_PhaseDriverOutputControl
     HIGH_SIDE_PWM_LOW_SIDE_nPWM = 0x07 /* High Side is PWM, Low Side is !PWM */
 };
 
-/* Configuration enum classs for PWM_GEN Control Register */
+/* Configuration enum classes for PWM_GEN Control Register */
 
 /**
  * @brief Number of SPI Clock Cycle require for synchronizing the Oscillator
@@ -223,7 +223,7 @@ enum class DRV8311_PWM_GEN_ENABLE
     PWM_GEN_ENABLED = 0x01   /* PWM_GEN enabled */
 };
 
-/* Configuration enum classs for PWM Control Register 1 */
+/* Configuration enum classes for PWM Control Register 1 */
 
 /**
  * @brief PWM mode selection
@@ -245,7 +245,7 @@ enum class DRV8311_SpreadSpectrumModulation
     SPREA_SPECTRUM_MODULATATION_DISABLED = 0x01 /* Spread spectrum modulation is disable */
 };
 
-/* Configuration enum classs for Predriver control Register */
+/* Configuration enum classes for Predriver control Register */
 
 /**
  * @brief Slew rate settings
@@ -282,7 +282,7 @@ enum class DRV8311_DriverDelayCompensation
     DRIVER_DELAY_COMPENSATION_ENABLED = 0x01   /* Driver delay compensation is enabled */
 };
 
-/** Configuration enum classs for CSA Control Register */
+/** Configuration enum classes for CSA Control Register */
 
 /**
  * @brief Current Sense Amplifier Gain
@@ -304,7 +304,7 @@ enum class DRV8311_CurrentSenseAmplifierState
     CSA_ENABLED = 0x01   /* Current Sense Amplifier is enabled */
 };
 
-/* Configuration enum classs for System Control Register */
+/* Configuration enum classes for System Control Register */
 
 /**
  * @brief Parity Enable for both SPI and tSPI
@@ -481,6 +481,13 @@ public:
      * @return DRV8311_SystemStatus The system status
      */
     DRV8311_SystemStatus getSystemStatus();
+
+    /**
+     * @brief Get PWM Sync Period
+     * 
+     * @return uint16_t The PWM Sync Period
+     */
+    uint16_t getPWMSyncPeriod();
 
     /* Read and write configurations from and to device */
 
@@ -665,6 +672,11 @@ public:
      * @param time The slow recovery retry time to set
      */
     void setSlowRecoveryRetryTime(DRV8311_SlowRecoveryRetryTime time);
+
+    /** 
+     * @brief Clear all latched fault bits
+     */
+    void clearFaults();
 
     /**
      * @brief Get the Phase A Driver Output control
@@ -903,20 +915,6 @@ public:
      * @return DRV8311_RegisterLock The Register Lock
      */
     DRV8311_RegisterLock getRegisterLock();
-
-    /* Varius other functionalities */
-
-    /** 
-     * @brief Clear all faults
-     */
-    void clearFaults();
-
-    /**
-     * @brief Get PWM Sync Period
-     * 
-     * @return uint16_t The PWM Sync Period
-     */
-    uint16_t getPWMSyncPeriod();
 
 protected:
 
