@@ -41,7 +41,7 @@ enum class DRV8311_OverCurrentProtectionFaultMode
     REPORT_nFAULT_FAST_RETRY = 0x01,    /* Report on nFault, predriver HiZ, auto recovery with Fast Retry time (in ms) */
     REPORT_nFAULT_LATCHED_FAULT = 0x02, /* Report on nFault, predriver HiZ, Latched Fault */
     REPORT_nFAULT_NO_ACTION = 0x03,     /* Report on nFault, No action on predriver */
-    Disabled = 0x07                     /* Disabled */
+    DISABLED = 0x07                     /* Disabled */
 };
 
 /**
